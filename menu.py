@@ -3,8 +3,8 @@ import os
 
 def main_menu():
     os.system("clear")
-    ans = int(input("1- IP address\n2- Block Domain Regex URL\n3- Port\n4- Limit Traffic\n5- Header\n6- Port Scanning "
-                    "and Knocking\n0- Exit\n"))
+    ans = int(input("1- IP address\n2- Block Domain Regex URL\n3- Port\n4- Limit Traffic\n5- Header\n6- Port Scanning\n"
+                    "7- Port Knocking\n8- Flush Rules\n0- Exit\n"))
     return ans
 
 
@@ -117,4 +117,12 @@ def get_username():
 def get_sequence():
     os.system("clear")
     ans = input("Enter a space separated sequnce of port number\n").split(" ")
+    conn_port = input("Enter the connection port\n")
+    return ans,conn_port
+
+
+def get_header():
+    os.system("clear")
+    ans = input("Enter a HTTP header\n")
     return ans
+

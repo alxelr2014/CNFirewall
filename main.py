@@ -1,8 +1,12 @@
+import os
+
 import menu
 import ip
 import url
 import port
 import limtraffic
+import header
+import portscan
 
 
 def main():
@@ -49,9 +53,13 @@ def main():
         elif input_code == 4:
             limtraffic.limit_traffic()
         elif input_code == 5:
-            pass
-        elif input_code == 5:
-            pass
+            header.block_header(menu.get_header())
+        elif input_code == 6:
+            portscan.block_port_scanner()
+        elif input_code == 7:
+            portscan.port_knocking()
+        elif input_code == 8:
+            os.system("iptables -F")
         else:
             pass
 

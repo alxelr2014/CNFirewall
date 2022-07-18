@@ -6,7 +6,7 @@ def limit_rate():
     lim = menu.get_rate()
     if lim == "0":
         return " "
-    command = "limit --limit" + lim
+    command = " --hashlimit-upto" + lim
     return command
 
 
